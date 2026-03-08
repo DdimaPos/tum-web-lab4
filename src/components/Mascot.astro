@@ -1,13 +1,17 @@
 ---
+import client from "../../tina/__generated__/client"
+
+const response = await client.queries.mascotConnection();
+const mascot = response.data.mascotConnection.edges?.[0]?.node;
 ---
 
 <div class="mascot" id="mascot">
   <div class="mascot__bubble">
     <p class="mascot__message">
-      Bine ai venit! Descoperă fundele noastre lucrate manual cu dragoste!
+      {mascot?.message}
     </p>
   </div>
-  <img src="/mascot.png" alt="Mascota Bow Buddy" class="mascot__img" />
+  <img src={mascot?.mascotImage} alt={mascot?.mascotName} class="mascot__img" />
 </div>
 
 <style>

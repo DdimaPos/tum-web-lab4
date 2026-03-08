@@ -1,7 +1,8 @@
 ---
-import homepageData from '../../content/homepage/Homepage.json';
+import client from '../../tina/__generated__/client';
 
-const footer = homepageData.footer;
+const footerResponse = await client.queries.homepageConnection();
+const footer = footerResponse.data.homepageConnection.edges?.[0]?.node?.footer
 ---
 
 <footer>

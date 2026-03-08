@@ -1,11 +1,12 @@
 ---
-import homepageData from '../../content/homepage/Homepage.json';
+import client from "../../tina/__generated__/client"
 
-const cards = homepageData.about?.cards ?? [];
+const cardsResponse = await client.queries.homepageConnection();
+const cards = cardsResponse.data.homepageConnection.edges?.[0]?.node?.about?.cards;
 ---
 
 <section id="about" class="about wrapper">
-  {cards.map((card: any) => (
+  {cards?.map((card: any) => (
     <div class="about__card">
       <div class="about__img__container">
         <img

@@ -1,16 +1,17 @@
 ---
-import homepageData from '../../content/homepage/Homepage.json';
+import client from '../../tina/__generated__/client';
 
-const contact = homepageData.contact;
+const contactResponse = await client.queries.homepageConnection();
+const contactFormContent = contactResponse.data.homepageConnection.edges?.[0]?.node?.contact;
 ---
 
 <section id="contact" class="contact__container">
   <div class="contact wrapper">
-    <div class="contact__data" style={`background-image: url(${contact?.backgroundImage})`}>
-      <h2 class="contact__title">{contact?.title}</h2>
-      <p class="contact__text">{contact?.text}</p>
+    <div class="contact__data" style={`background-image: url(${contactFormContent?.backgroundImage})`}>
+      <h2 class="contact__title">{contactFormContent?.title}</h2>
+      <p class="contact__text">{contactFormContent?.text}</p>
       <ul class="contact__list">
-        {contact?.contactItems?.map((item: any) => (
+        {contactFormContent?.contactItems?.map((item: any) => (
           <li class="contact__items">
             <Fragment set:html={item.icon} />
             <a aria-label={item.ariaLabel} href={item.href}>{item.label}</a>

@@ -1,8 +1,10 @@
 ---
-import homepageData from '../../content/homepage/Homepage.json';
+import client from '../../tina/__generated__/client';
 
-const faq = homepageData.faq;
-const items = faq?.items ?? [];
+const faqResponse = await client.queries.homepageConnection();
+const faqNode = faqResponse.data.homepageConnection.edges?.[0]?.node;
+const faq = faqNode?.faq
+const items = faqNode?.faq?.items ?? []
 ---
 
 <section id="faq" class="faq__container">
