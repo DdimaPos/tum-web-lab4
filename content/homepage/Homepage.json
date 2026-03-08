@@ -1,0 +1,96 @@
+{
+  "hero": {
+    "heroTitle": "Perfecțiune lucrată manual pentru fiecare moment",
+    "heroSubtitle": "Creat cu dragoste, purtat cu bucurie",
+    "heroText": "Îmbunătățește-i look-ul de zi cu zi cu colecția noastră de funde premium, lucrate manual. De la in moale la satin vibrant, fiecare piesă este cusută meticulos pentru a asigura o calitate care durează prin fiecare aventură și celebrare.",
+    "heroCta": "Cumpără Colecția",
+    "heroImage": "/bows/heroBow.jpg"
+  },
+  "about": {
+    "cards": [
+      {
+        "image": "/bows/aboutusBow1.jpg",
+        "imageAlt": "Despre noi - funde albastre și roșii",
+        "title": "Inima din spatele panglicii",
+        "description": "Ceea ce a început ca o pasiune pentru crearea de accesorii frumoase pentru propria familie s-a transformat într-un mic studio dedicat stilului atemporal. Fiecare fundă pe care o producem este tăiată, cusută și legată manual cu precizie chiar aici, în atelierul nostru de acasă. Credem că cele mai mici detalii creează cele mai frumoase amintiri. Alegând fundele noastre lucrate manual, nu cumperi doar un accesoriu; susții un vis și un angajament față de moda sustenabilă (slow fashion). Folosim cele mai fine materiale pentru a ne asigura că fiecare piesă este la fel de unică precum persoana care o poartă.",
+        "linkLabel": "Află mai multe despre povestea noastră",
+        "linkHref": "#"
+      },
+      {
+        "image": "/bows/aboutusBow2.jpg",
+        "imageAlt": "Despre noi - fundă roșie",
+        "title": "Creată pentru fiecare aventură",
+        "description": "Știm că fundele trebuie să facă mai mult decât să arate bine — trebuie să rămână fixate. Fie că este vorba despre o petrecere aniversară, o ședință foto de familie sau o zi plină la școală, fundele noastre sunt proiectate cu accesorii de înaltă calitate pentru a asigura confortul și fixarea pe tot parcursul zilei. De la catifeaua noastră supradimensionată până la seturile delicate tip \"pigtail\", colecția noastră oferă un curcubeu de culori și texturi pentru a se potrivi cu orice ținută. Ne mândrim cu crearea unor piese de calitate, menite să fie transmise de la soră la soră și de la o generație la alta.",
+        "linkLabel": "Află mai multe despre calitatea noastră",
+        "linkHref": "#"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Întrebări Frecvente",
+    "subtitle": "Tot ce trebuie să știi despre fundele noastre lucrate manual",
+    "items": [
+      {
+        "question": "Pentru ce categorie de vârstă sunt potrivite fundele?nnnnnnnn",
+        "answer": "Fundele noastre sunt concepute pentru toate vârstele! De la nou-născuți la adulți, creăm mărimi și stiluri care funcționează pentru toată lumea. Clemele și bentițele noastre sunt suficient de delicate pentru bebeluși, dar suficient de sigure pentru joacă activă."
+      },
+      {
+        "question": "Ce materiale folosiți pentru funde?",
+        "answer": "Selectăm cu atenție materiale premium, inclusiv catifea moale, satin luxos și in respirabil. Toate materialele sunt alese manual pentru calitatea, textura și durabilitatea lor, pentru a ne asigura că funda ta arată superb și durează ani de zile."
+      },
+      {
+        "question": "Cum am grijă de funda mea lucrată manual?",
+        "answer": "Curățați petele cu o cârpă umedă atunci când este necesar. Pentru fundele din catifea, periați ușor într-o singură direcție pentru a menține textura materialului. Depozitați-le pe o suprafață plană sau agățate pentru a păstra forma fundei. Evitați spălarea la mașină pentru a menține integritatea detaliilor lucrate manual."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Intră în legătură",
+    "text": "Ai o întrebare despre o comandă personalizată sau un material specific? Trimite-ne un mesaj și îți vom răspunde în termen de 24 de ore. Ne face plăcere să auzim de la tine!",
+    "backgroundImage": "/bows/contactBow.jpg",
+    "contactItems": [
+      {
+        "ariaLabel": "Număr de telefon",
+        "href": "tel:+37368111111",
+        "label": "+373 (68) 111 111",
+        "icon": "<svg aria-hidden=\"true\" focusable=\"false\" width=\"21\" height=\"21\" viewBox=\"0 0 21 21\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M21 10.5643C21 4.72966 16.2992 0 10.5013 0C4.70079 0.00131234 0 4.72966 0 10.5656C0 15.8373 3.83989 20.2073 8.85827 21V13.6181H6.19422V10.5656H8.86089V8.23622C8.86089 5.58924 10.4291 4.1273 12.8268 4.1273C13.9764 4.1273 15.1772 4.33333 15.1772 4.33333V6.93176H13.853C12.5499 6.93176 12.143 7.74672 12.143 8.58268V10.5643H15.0538L14.5892 13.6168H12.1417V20.9987C17.1601 20.206 21 15.836 21 10.5643Z\" fill=\"#111111\"/></svg>"
+      },
+      {
+        "ariaLabel": "Adresă de email",
+        "href": "mailto:hello@bowshop.com",
+        "label": "hello@bowshop.com234567890",
+        "icon": "<svg aria-hidden=\"true\" focusable=\"false\" width=\"21\" height=\"21\" viewBox=\"0 0 21 21\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M21 10.5643C21 4.72966 16.2992 0 10.5013 0C4.70079 0.00131234 0 4.72966 0 10.5656C0 15.8373 3.83989 20.2073 8.85827 21V13.6181H6.19422V10.5656H8.86089V8.23622C8.86089 5.58924 10.4291 4.1273 12.8268 4.1273C13.9764 4.1273 15.1772 4.33333 15.1772 4.33333V6.93176H13.853C12.5499 6.93176 12.143 7.74672 12.143 8.58268V10.5643H15.0538L14.5892 13.6168H12.1417V20.9987C17.1601 20.206 21 15.836 21 10.5643Z\" fill=\"#111111\"/></svg>"
+      },
+      {
+        "ariaLabel": "Adresă fizică",
+        "href": "",
+        "label": "Main Street Studio, Suite 100",
+        "icon": "<svg aria-hidden=\"true\" focusable=\"false\" width=\"21\" height=\"21\" viewBox=\"0 0 21 21\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M21 10.5643C21 4.72966 16.2992 0 10.5013 0C4.70079 0.00131234 0 4.72966 0 10.5656C0 15.8373 3.83989 20.2073 8.85827 21V13.6181H6.19422V10.5656H8.86089V8.23622C8.86089 5.58924 10.4291 4.1273 12.8268 4.1273C13.9764 4.1273 15.1772 4.33333 15.1772 4.33333V6.93176H13.853C12.5499 6.93176 12.143 7.74672 12.143 8.58268V10.5643H15.0538L14.5892 13.6168H12.1417V20.9987C17.1601 20.206 21 15.836 21 10.5643Z\" fill=\"#111111\"/></svg>"
+      }
+    ]
+  },
+  "footer": {
+    "title": "OxyHandmade",
+    "text": "Creăm eleganță, panglică cu panglică. Realizăm accesorii premium, legate manual, concepute pentru a face momentele tale speciale și mai frumoase.",
+    "phone": "+373 838 383",
+    "email": "hello@oxyhandmade.com",
+    "copyright": "© 2026 OxyHandmade Boutique. Toate drepturile rezervate.",
+    "links": [
+      {
+        "label": "Povestea Noastră",
+        "href": "#about",
+        "ariaLabel": "Despre noi"
+      },
+      {
+        "label": "Intră în legătură",
+        "href": "#contact",
+        "ariaLabel": "Contactează-ne"
+      },
+      {
+        "label": "Instrucțiuni de îngrijire",
+        "href": "#",
+        "ariaLabel": "Blog"
+      }
+    ]
+  }
+}

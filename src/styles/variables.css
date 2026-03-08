@@ -1,0 +1,11 @@
+:root {
+  --black: #000;
+  --white: #fff;
+  --grey-dark: #646464;
+  --grey-light: #f9f9f9;
+  --grey-light-2: #e9e9e9;
+  --primary: #ff0081;
+  --secondary: #a4a8d1;
+  --bulma-primary-h: 330deg;
+  --bulma-primary-l: 50%;
+}
