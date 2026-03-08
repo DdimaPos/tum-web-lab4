@@ -1,0 +1,123 @@
+---
+import Button from "./Button.astro";
+import client from '../../tina/__generated__/client';
+
+const heroResponse = await client.queries.homepageConnection();
+const hero = heroResponse.data.homepageConnection.edges?.[0]?.node?.hero;
+
+---
+
+<section id="hero" class="hero__container">
+  <div class="hero wrapper">
+    <div class="hero__left">
+      <h1 class="hero__title">
+        {hero?.heroTitle}
+      </h1>
+      <div class="hero__text">
+        <h2 class="hero__subtitle">
+          {hero?.heroSubtitle}
+        </h2>
+        <p class="hero__description">
+        {hero?.heroText}
+        </p>
+      </div>
+      <Button label={hero?.heroCta}/>
+    </div>
+    <div class="hero__right">
+      <img
+        src={hero?.heroImage}
+        alt="O fundă de păr din catifea frumos lucrată"
+        class="hero__img"
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+.hero__container {
+  background-color: var(--grey-light);
+}
+
+.hero {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1.125rem;
+  padding-top: 1.5rem;
+  padding-bottom: 3.75rem;
+  flex-direction: row;
+}
+
+.hero__left {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+
+.hero__title {
+  font-family: OutfitBlack;
+  font-size: 3rem;
+  color: var(--primary);
+}
+
+.hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.hero__subtitle {
+  font-family: OutfitMedium;
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+.hero__description {
+  font-size: 0.875rem;
+  max-width: 33rem;
+}
+
+.hero__img {
+  width: 40.5rem;
+  height: 40.5rem;
+  object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+  .hero__img {
+    width: 28rem;
+    height: 28rem;
+  }
+
+  .hero__title {
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero__left {
+    align-items: center;
+  }
+
+  .hero__img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .hero__title {
+    font-size: 2rem;
+  }
+
+  .hero__description {
+    max-width: 100%;
+  }
+}
+</style>
+
