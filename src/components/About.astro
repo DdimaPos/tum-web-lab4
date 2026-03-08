@@ -1,0 +1,106 @@
+---
+import homepageData from '../../content/homepage/Homepage.json';
+
+const cards = homepageData.about?.cards ?? [];
+---
+
+<section id="about" class="about wrapper">
+  {cards.map((card: any) => (
+    <div class="about__card">
+      <div class="about__img__container">
+        <img
+          src={card.image}
+          alt={card.imageAlt}
+          class="about__img"
+        />
+      </div>
+      <article class="about__text">
+        <h3 class="about__title">{card.title}</h3>
+        <p class="about__description">{card.description}</p>
+        <a href={card.linkHref} class="about__link">{card.linkLabel}</a>
+      </article>
+    </div>
+  ))}
+</section>
+
+<style>
+.about {
+  display: flex;
+  gap: 1.125rem;
+  padding: 5rem 0;
+}
+
+.about__card {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 1.5rem;
+  padding-bottom: 35px;
+  display: flex;
+  gap: 1.125rem;
+  max-width: 50%;
+}
+
+.about__img__container {
+  width: 110.25rem;
+  height: 14.475rem;
+}
+
+.about__img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.about__title {
+  font-size: 1.125rem;
+  margin-bottom: 0.75rem;
+  font-family: OutfitSemibold;
+}
+
+.about__description {
+  font-size: 0.875rem;
+  margin-bottom: 23px;
+  font-family: OutfitRegular;
+}
+
+.about__link {
+  font-family: OutfitSemibold;
+  text-decoration: underline;
+  color: var(--white);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about {
+    flex-direction: column;
+  }
+
+  .about__card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    padding: 3rem 0;
+  }
+
+  .about__card {
+    max-width: 100%;
+    flex-direction: column;
+  }
+
+  .about__img__container {
+    width: 100%;
+    height: auto;
+  }
+
+  .about__img {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>

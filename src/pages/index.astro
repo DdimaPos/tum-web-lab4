@@ -1,15 +1,26 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
+import Header from '../components/Header.astro';
+import MobileBanner from '../components/MobileBanner.astro';
 import Hero from '../components/Hero.astro';
-
-// const postsResponse = await client.queries.heroConnection();
-// const posts = postsResponse.data.heroConnection.edges;
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import About from '../components/About.astro';
+import FAQ from '../components/FAQ.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+import Mascot from '../components/Mascot.astro';
+import BackToTop from '../components/BackToTop.astro';
 ---
 
 <Layout>
-  <Hero/>
+  <Header />
+  <main>
+    <MobileBanner />
+    <Hero />
+    <About />
+    <FAQ />
+    <Contact />
+  </main>
+  <Footer />
+  <Mascot />
+  <BackToTop />
 </Layout>

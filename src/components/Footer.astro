@@ -1,0 +1,186 @@
+---
+import homepageData from '../../content/homepage/Homepage.json';
+
+const footer = homepageData.footer;
+---
+
+<footer>
+  <section class="footer__info wrapper">
+    <div class="footer__left">
+      <h2 class="footer__title">{footer?.title}</h2>
+      <p class="footer__text">{footer?.text}</p>
+      <form action="" class="footer__input">
+        <input
+          aria-label="Email"
+          placeholder="Alătură-te newsletter-ului nostru"
+          type="email"
+          class="footer__search"
+        />
+        <button type="submit" class="button is-primary btn-primary">Abonare</button>
+      </form>
+    </div>
+    <div class="footer__center">
+      <nav aria-label="Navigare subsol">
+        <ul class="footer__linklist">
+          {footer?.links?.map((link: any) => (
+            <li class="footer__link">
+              <a aria-label={link.ariaLabel} href={link.href}>{link.label}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </div>
+    <div class="footer__right">
+      <p class="footer__contacts">Asistență</p>
+      <a aria-label="Număr de telefon" href={`tel:${footer?.phone}`} class="footer__phone">{footer?.phone}</a>
+      <a aria-label="Adresă de email" href={`mailto:${footer?.email}`} class="footer__email">{footer?.email}</a>
+      <ul class="sponsor__list">
+        <li>
+          <img width="50" height="29" src="/Icons/visa.png" alt="Pictogramă card Visa" />
+        </li>
+        <li>
+          <img width="50" height="41" src="/Icons/mastercard.png" alt="Pictogramă Mastercard" />
+        </li>
+      </ul>
+    </div>
+  </section>
+  <hr class="footer__separator" />
+  <section class="footer__copyright wrapper">
+    <span>{footer?.copyright}</span>
+  </section>
+</footer>
+
+<style>
+.footer__info,
+.footer__copyright {
+  padding: 1.5rem 0;
+}
+
+.footer__separator {
+  width: 100%;
+  height: 1px;
+  background-color: var(--grey-light-2);
+}
+
+.footer__info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__left {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  gap: 1.5rem;
+
+  .footer__title {
+    font-size: 3rem;
+    font-family: OutfitSemibold;
+  }
+
+  .footer__text {
+    font-size: 1.125rem;
+  }
+
+  .footer__input {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    input {
+      height: 37px;
+      width: 19.25rem;
+      border-bottom: 1px solid var(--primary);
+      font-size: 1.125rem;
+    }
+  }
+}
+
+.footer__linklist {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.125rem;
+  gap: 1rem;
+
+  a,
+  a:visited {
+    color: var(--black);
+  }
+}
+
+.footer__right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  a,
+  a:visited {
+    color: var(--grey-dark);
+  }
+
+  .footer__email,
+  .footer__email:visited {
+    text-decoration: underline;
+  }
+}
+
+.sponsor__list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+}
+
+.footer__copyright {
+  text-align: center;
+}
+
+.footer__left .footer__input input {
+  width: min(19.25rem, 100%);
+}
+
+@media (max-width: 1024px) {
+  .footer__left {
+    max-width: 40%;
+  }
+
+  .footer__left .footer__input input {
+    width: 14rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__info {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .footer__left {
+    max-width: 100%;
+  }
+
+  .footer__left .footer__input {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .footer__center {
+    order: -1;
+  }
+
+  .footer__linklist {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer__right {
+    align-items: flex-start;
+  }
+
+  .sponsor__list {
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+}
+</style>
