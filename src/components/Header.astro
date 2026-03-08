@@ -1,0 +1,158 @@
+---
+---
+
+<header class="header wrapper">
+  <nav class="nav" aria-label="Navigare antet">
+    <div class="logo">
+      <img width="50" height="50" src="/Logo.png" alt="Logo website" />
+    </div>
+    <ul class="nav__list">
+      <li class="nav__item">
+        <a href="#about" class="nav__link">Despre noi</a>
+      </li>
+      <li class="nav__item">
+        <a href="#contact" class="nav__link">Contactează-ne</a>
+      </li>
+      <li class="nav__item">
+        <a href="#faq" class="nav__link">Întrebări frecvente</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="search">
+    <input
+      aria-label="Caută pe acest site"
+      id="search-input"
+      class="search__input"
+      type="text"
+      placeholder="Caută pe acest site"
+    />
+    <button aria-label="Caută" class="search__button">
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        width="32"
+        height="32"
+        viewBox="0 0 32 32"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M25.5 25.5L21.014 21.006L25.5 25.5ZM23.5 15C23.5 17.2543 22.6045 19.4163 21.0104 21.0104C19.4163 22.6045 17.2543 23.5 15 23.5C12.7457 23.5 10.5837 22.6045 8.98959 21.0104C7.39553 19.4163 6.5 17.2543 6.5 15C6.5 12.7457 7.39553 10.5837 8.98959 8.98959C10.5837 7.39553 12.7457 6.5 15 6.5C17.2543 6.5 19.4163 7.39553 21.0104 8.98959C22.6045 10.5837 23.5 12.7457 23.5 15V15Z"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+  </div>
+</header>
+
+<style>
+.header {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.nav {
+  display: flex;
+  height: 3rem;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4.5rem;
+
+  .nav__list {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .nav__item {
+      position: relative;
+
+      &:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-right: -10px;
+        height: 100%;
+        width: 1px;
+        background-color: var(--black);
+      }
+    }
+  }
+}
+
+.nav__link,
+.nav__link:visited {
+  color: var(--black);
+  font-size: 1.125rem;
+  background-color: transparent;
+}
+
+.search {
+  border: 2px solid var(--primary);
+  font-size: 1.125rem;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  width: 26.5rem;
+
+  .search__input {
+    padding-left: 1rem;
+    width: 90%;
+
+    &::placeholder {
+      font-size: 1.125rem;
+    }
+  }
+
+  .search__button {
+    width: 3rem;
+    height: 100%;
+    background-color: var(--primary);
+  }
+}
+
+@media (max-width: 1024px) {
+  .search {
+    width: 18rem;
+  }
+
+  .nav {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    height: auto;
+    gap: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .nav {
+    width: 100%;
+    gap: 1.5rem;
+  }
+
+  .nav__list {
+    gap: 0.75rem;
+  }
+
+  .nav__item:not(:last-child)::after {
+    display: none;
+  }
+
+  .search {
+    width: 100%;
+  }
+}
+</style>

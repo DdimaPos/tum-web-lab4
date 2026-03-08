@@ -1,12 +1,19 @@
+---
+import 'bulma/css/bulma.css';
+import '../styles/base.css';
+import '../styles/fonts.css';
+import '../styles/variables.css';
+import '../styles/utilities.css';
+---
+
 <!doctype html>
-<html lang="ro">
+<html lang="ro" data-theme="light">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
+		<link rel="icon" type="image/png" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Oxy Handmade</title>
 	</head>
 	<body>
 		<slot />
@@ -14,29 +21,8 @@
 </html>
 
 <style>
-  @import '../styles/base.css';
-  @import '../styles/fonts.css';
-  @import '../styles/variables.css';
-
-  @import 'bulma/css/bulma.css';
-
   body {
     font-family: OutfitRegular;
     max-width: 100vw;
-  }
-
-  .wrapper {
-    max-width: 75rem;
-    margin: 0 auto;
-
-    @media (max-width: 1220px) {
-      max-width: 95%;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .mobile-only {
-      display: block;
-    }
   }
 </style>
