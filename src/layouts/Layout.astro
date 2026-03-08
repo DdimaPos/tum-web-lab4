@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ro">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -14,10 +14,29 @@
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+  @import '../styles/base.css';
+  @import '../styles/fonts.css';
+  @import '../styles/variables.css';
+
+  @import 'bulma/css/bulma.css';
+
+  body {
+    font-family: OutfitRegular;
+    max-width: 100vw;
+  }
+
+  .wrapper {
+    max-width: 75rem;
+    margin: 0 auto;
+
+    @media (max-width: 1220px) {
+      max-width: 95%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .mobile-only {
+      display: block;
+    }
+  }
 </style>
