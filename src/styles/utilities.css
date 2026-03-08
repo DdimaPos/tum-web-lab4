@@ -14,3 +14,14 @@
     display: block;
   }
 }
+
+.btn-primary {
+  height: 54px;
+  width: 195px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: var(--primary); */
+  color: var(--white);
+  font-size: 1.125rem;
+}

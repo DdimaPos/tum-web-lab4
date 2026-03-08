@@ -1,4 +1,13 @@
 ---
+import client from "../../tina/__generated__/client"
+
+const response = await client.queries.navListConnection();
+const navItems = response.data.navListConnection.edges?.map((item)=>{
+  return {
+    href: item?.node?.href,
+    label: item?.node?.label
+  }
+})
 ---
 
 <header class="header wrapper">
@@ -6,17 +15,15 @@
     <div class="logo">
       <img width="50" height="50" src="/Logo.png" alt="Logo website" />
     </div>
-    <ul class="nav__list">
-      <li class="nav__item">
-        <a href="#about" class="nav__link">Despre noi</a>
-      </li>
-      <li class="nav__item">
-        <a href="#contact" class="nav__link">Contactează-ne</a>
-      </li>
-      <li class="nav__item">
-        <a href="#faq" class="nav__link">Întrebări frecvente</a>
-      </li>
-    </ul>
+    {navItems && 
+      <ul class="nav__list">
+        {navItems.map(item=>(
+          <li class="nav__item">
+            <a href={item.href} class="nav__link">{item.label}</a>
+          </li>
+        ))}
+      </ul>
+    }
   </nav>
 
   <div class="search">
